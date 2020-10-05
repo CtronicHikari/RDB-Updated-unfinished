@@ -22,6 +22,7 @@ int main() {
 	string GeometryID = "dummy";
 	string ResourceID = "dummy";
 	std::vector<sigma::Geometry> Geometries;
+	std::vector<sigma::Object> Objects;
 	sigma::Vector4 *Origin = new sigma::Vector4(0.0f,0.0f,0.0f,0,0);
 	sigma::Vector4 *Range = new sigma::Vector4(10.0f,10.0f,10.0f,2,2);
 
@@ -31,8 +32,10 @@ int main() {
 	//ResourceID = dbConnect.addResource(1,1,"dummy-Paraments","dummy-GeometryID","/load_path_A/load_path_A/abc.jpg","/save_path_A/save_path_B");
 	//dbConnect.link_Geo_and_Obj(2,GeometryID);
 	//dbConnect.link_Geo_and_Res(ResourceID,GeometryID);
-	//Geometries = dbConnect.loadGeometry(Origin,Range,2);
+	//Geometries = dbConnect.loadGeometry(Origin,Range,3);
 	//cout << Geometries.size() << endl;
+	//Objects = dbConnect.loadObject(Origin,Range,1);
+	//cout << Objects.size() << endl;
 	/*
 	for(int i=0;i<Geometries.size();i++)
 	{

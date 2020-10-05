@@ -50,7 +50,17 @@ public:
 	const void link_Geo_and_Obj(int ObjectID, string GeometryID);
 	////Object's Geometry TODO
 	const void link_Geo_and_Res(string ResourceID, string GeometryID);
+
+	//Search func
 	const std::vector<sigma::Geometry> loadGeometry(sigma::Vector4 *Origin, sigma::Vector4 *Range, int Mode);
+	const std::vector<sigma::Object> loadObject(sigma::Vector4 *Origin, sigma::Vector4 *Range, int Mode);
+	sigma::ResourceMeta readResourceInformation(MYSQL_ROW src);
+	std::vector<sigma::ResourceMeta> loadResourceMeta(sigma::Vector4 *Origin, sigma::Vector4 *Range, int Mode, int Type=0);
+	std::vector<sigma::ResourceMeta> loadResourceMeta(int ObjectID, int Type=0);
+	std::vector<sigma::ResourceMeta>* loadResourceMeta(std::vector<sigma::Object> Objects, int Type=0);
+	std::vector<sigma::ResourceMeta> loadResourceMeta(string GeometryID , int Type=0);
+	std::vector<sigma::ResourceMeta> loadResourceMeta(sigma::Vector4 *Origin, sigma::Vector4 *Range, sigma::Target *target, double theta, int Type=0);
+	std::vector<sigma::ResourceMeta> loadResourceMeta(sigma::Vector4 *Origin, sigma::Vector4 *Range, sigma::Target *target, double alpha, double beta, int Type=0);
 	
 };
 #endif
